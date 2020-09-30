@@ -1,0 +1,34 @@
+<html>
+    <body>
+     <center>
+        <table border="1" cellspacing="0" cellpadding="10">
+            
+                
+  
+   <% record.forEach((row)=>{ %>
+    <tr>
+        <td> <%= row.name %> </td>
+        <td> <%= row.password  %> </td>
+       <td> <%= row.email  %> </td>
+      <td> <a href="/edit/<%= row._id %>"> edit</a></td>
+      <td> <a href="/delete/<%= row._id %>"> delete</a></td>
+    </tr>
+
+<%   }) %>
+               
+           
+           </table><br><br><br><br>
+    
+     <form method="POST" action="/">
+        username<input type="text" name="username"><br>
+        password<input type="password" name="password"><br>
+        email<input type="email" name="email"><br>
+        <input type="submit">
+    </form>
+         
+
+    
+    </center>
+    </body>
+    
+</html>

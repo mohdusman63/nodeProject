@@ -1,0 +1,29 @@
+
+<!-- display.js -->
+<html>
+    <head>
+        <title>  </title>
+  
+    </head>
+    <body>
+
+        <h1>welcome</h1>
+        <table border="1" cellspacing="0">
+          <th>name</th>
+          <th>email</th>
+          <th>etype</th>
+          <th>hourlyrate</th>
+          <th>totalhours</th>
+          <% records.forEach(function(row){ %>
+              <tr>
+               <td>  <%=row.name %></td>
+               <td>  <%=row.email %></td>
+               <td>  <%=row.etype %></td>
+               <td>  <%=row.hourlyrate %></td>
+               <td>  <%=row.totalhours %></td>
+              </tr>
+          
+<% }) %>
+        </table>
+    </body>
+</html>

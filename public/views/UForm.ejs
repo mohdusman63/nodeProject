@@ -1,0 +1,26 @@
+<html>
+    <head></head>
+    <body>
+
+<form method="POST">
+    username <input type="text" name="username"><br>
+  <p style="color:red">
+    <% if (error.username) { %>
+        <%= error.username.msg %>
+      <% } %>
+
+</p>
+    password <input type="password" name="password"><br>
+    <p style="color:red">  
+    <% if (error.password) { %>
+        <%= error.password.msg %>
+      <% } %>
+    </p>
+
+    <input type="submit">
+</form>
+
+    </body>
+</html>
+
+

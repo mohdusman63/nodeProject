@@ -1,0 +1,11 @@
+<html>
+    <body>
+        <form method="GET" action="/update">
+            <input type="hidden" name="id" value="<%= record._id %>">
+            username<input type="text" name="username" value="<%= record.name %> "><br>
+            password<input type="password" name="password" value="<%= record.password  %> "><br>
+            email<input type="email" name="email" value="<%= record.email  %> "><br>
+            <input type="submit">
+        </form>
+    </body>
+</html>
