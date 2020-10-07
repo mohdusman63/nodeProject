@@ -1,0 +1,32 @@
+ 
+                           //Aggregation
+ db.order.aggregate([
+ {$match:
+     {'cust_id':2}},
+         {$group:{'_id':'$cust_id',total:{'$sum':'$amount'}}}])
+		 
+		        // for display only specific things
+
+db.inventory.aggregate([{$project:{item:1,qty:1}}])
+
+
+         without id
+db.inventory.aggregate([{$project:{_id:0,item:1,qty:1}}])
+                 //same result
+
+ db.inventory.find({},{item:1})
+ 
+ db.inventory.find({price:  {  $gt:  19}  },
+                  {name:1,address:1})
+				  
+				  //sorting ascending
+db.inventory.find().sort({price:1})
+                
+				//sorting descending
+db.inventory.find().sort({price:-1})
+				  //skip
+				  it remove the top collections element
+ db.inventory.find().skip(2)
+
+ db.inventory.find().sort({item:-1}).skip(2) 
+				  
