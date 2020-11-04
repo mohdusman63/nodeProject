@@ -1,0 +1,9 @@
+ 
+	   new branch --->
+	   $ git checkout -b dev
+       Switched to a new branch 'dev'
+       $ git push origin dev
+	    dev----->master
+	    git checkout main
+		
+		git branch [branchName]
